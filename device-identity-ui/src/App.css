@@ -1,28 +1,106 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between; /* Aligns children to opposite ends */
+  align-items: center;
+  color: #000000; /* White text */
+  font-family: 'Arial', sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Closer to the subtitle */
+  max-width: 55%;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+.square-container {
+  display: flex;
+  position: static;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end; /* Align container to the end of the right side */
+  align-items: center;
+  width: 800px; /* Set the width of the square container */
+  height: 400px; /* Set the height of the square container */
+  background-color: #c27ce188; /* Container background color */
+  border-radius: 20px; /* Optional: if you want rounded corners for the container */
+  box-shadow: 0px 0px 10px 2px #c27ce188; 
+  margin: 300px 50px 100px auto; /* Adjust the right margin to move the container more to the right */
+}
+
+.button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+
+.app-button {
+  background-color: #000000; /* Dark background for buttons */
+  color: #ffd700; /* Golden text */
+  border: 2px solid #ffd700; /* Golden border */
+  padding: 10px 20px;
+  width: 200px; /* Standard width for all buttons */
+  height: 50px; /* Standard height for all buttons */
+  margin: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 30px; /* Rounded corners for buttons */
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex; /* To center text horizontally and vertically */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  text-align: center; /* Ensure text is centered for browsers that don't support flexbox */
+  box-sizing: border-box; /* Include padding and border in the button's width and height */
+}
+
+.app-button:hover {
+  transform: scale(1.05); /* Button grows slightly when hovered */
+}
+
+.manufacturer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 
 .container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  position: relative; /* Added this line */
+  z-index: 2; /* Added this line */
 }
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* opacity: 0.7; */
+}
+
 
 .modal {
   display: flex;
@@ -35,7 +113,13 @@
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
 }
-
+/* #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+} */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
@@ -56,4 +140,88 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+/* Add this to your App.css */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: #c37ce1d3;
+  padding: 20px;
+  border-radius: 5px;
+  width: 800px;
+  height: 500px;
+}
+
+.popup-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.popup-input {
+  width: 60%;
+  height: 30px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.popup-button {
+  background-color: #000000;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.popup-button:hover {
+  transform: scale(1.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: violet;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
 }
