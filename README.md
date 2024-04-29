@@ -4,7 +4,7 @@
 
 This project proposes a groundbreaking blockchain-based solution aimed at revolutionizing identity verification and access control for IoT (Internet of Things) devices. In an era where data privacy, IoT device security, and personal identity management pose significant challenges, our solution provides a secure, transparent, and user-centric approach. By addressing the vulnerabilities inherent in current systems, we pave the way for enhanced data security and privacy in the digital age.
 
-
+![]([image_url](https://github.com/endurijahnavi/Blockchain-based-Secure-Identity-and-Access-Management-for-IoT-Devices/blob/main/Screenshot%202024-04-29%20165653.png))
 
 ## References 📚
 
